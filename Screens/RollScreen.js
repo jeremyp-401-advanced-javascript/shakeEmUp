@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Text } from "react-native-paper";
+import { Divider, Button, Title, Text } from "react-native-paper";
 import { StyleSheet, ScrollView, View } from "react-native";
 import { AppSettingsContext } from '../CustomProperties/RollSettings';
 import SelectBar from "../Components/SelectBar";
@@ -28,7 +28,14 @@ const RollRoute = () => {
       <ScrollView>
         <View style={styles.roll}>
           <SelectBar />
-          <Text>Rolling {appSetCtxt.diceNum} d{appSetCtxt.diceType} dice:</Text>
+          <Divider />
+          <Title>Rolling {appSetCtxt.diceNum} {appSetCtxt.diceType}-sided di{appSetCtxt.diceNum > 1 ? 'ce' : 'e'}:</Title>
+          
+          <Button accessibilityLabel="Roll" mode="contained" title="Roll"
+            onPress={() => console.log('Pressed')}
+          >
+            Roll!
+          </Button>
         </View>
       </ScrollView>
     </React.Fragment>
