@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {} from 'react';
 
 export const AppSettingsContext = React.createContext();
 
@@ -14,11 +14,11 @@ class AppSettings extends React.Component{
   }
 
   updateNumber = (num) => {
-    this.setState( diceNum = num); 
+    this.setState({diceNum: parseInt(num)}); 
   }
   
   updateType = (type) => {
-    this.setState( diceType = type); 
+    this.setState({diceType: parseInt(type)}); 
   }
 
   render(){

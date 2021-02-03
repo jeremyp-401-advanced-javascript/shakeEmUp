@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, Surface } from "react-native-paper";
+import { Text } from "react-native-paper";
 import { StyleSheet, ScrollView, View } from "react-native";
 
 function padding(a, b, c, d) {
@@ -29,6 +29,7 @@ const HomeRoute = () => {
       <ScrollView>
         <View style={styles.home}>
           <Text>Home</Text>
+          <Text>I really wish I had something to show here.</Text>
         </View>
       </ScrollView>
     </React.Fragment>

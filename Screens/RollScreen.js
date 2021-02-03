@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Text, Surface } from "react-native-paper";
+import { Text } from "react-native-paper";
 import { StyleSheet, ScrollView, View } from "react-native";
 import { AppSettingsContext } from '../CustomProperties/RollSettings';
 import SelectBar from "../Components/SelectBar";
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 });
 
 const RollRoute = () => {
-  // const appSetCtxt = useContext(AppSettingsContext);
+  const appSetCtxt = useContext(AppSettingsContext);
   // console.log(appSetCtxt);
 
   return (
@@ -28,7 +28,7 @@ const RollRoute = () => {
       <ScrollView>
         <View style={styles.roll}>
           <SelectBar />
-          <Text>Number: X of dY dice:</Text>
+          <Text>Rolling {appSetCtxt.diceNum} d{appSetCtxt.diceType} dice:</Text>
         </View>
       </ScrollView>
     </React.Fragment>

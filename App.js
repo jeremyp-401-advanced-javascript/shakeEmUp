@@ -5,12 +5,15 @@ import theme from "./CustomProperties/Themes";
 
 import MainScreen from "./Screens/MainScreen";
 import TopBar from "./Components/TopBar";
+import AppSettingsContext from './CustomProperties/RollSettings';
 
 export default function App() {
   return (
     <PaperProvider theme={theme}>
-      <TopBar />
-      <MainScreen />
+      <AppSettingsContext>
+        <TopBar />
+        <MainScreen />
+      </AppSettingsContext>
     </PaperProvider>
   );
 }

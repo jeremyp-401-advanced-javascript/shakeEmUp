@@ -4,9 +4,9 @@ import { Text } from "react-native-paper";
 import Select from 'react-native-picker-select';
 import { AppSettingsContext } from '../CustomProperties/RollSettings';
 
-const SelectBar = () => {
-  //const appSetCtxt = useContext(AppSettingsContext);
-  //console.log(appSetCtxt);
+const SelectBar = (props) => {
+  const appSetCtxt = useContext(AppSettingsContext);
+  console.log(appSetCtxt);
 
   // useEffect(() => {
   //   console.log(`diceNum says: `, diceNum);
@@ -19,7 +19,7 @@ const SelectBar = () => {
   return (
     <View>
       <Select 
-        onValueChange={(value) => console.log(value)}
+        onValueChange={(value) => appSetCtxt.updateNumber(value)}
         items={[
             { label: '1', value: '1' },
             { label: '2', value: '2' },
@@ -30,7 +30,7 @@ const SelectBar = () => {
         ]}
       />
       <Select 
-        onValueChange={(value) => console.log(value)}
+        onValueChange={(value) => appSetCtxt.updateType(value)}
         items={[
             { label: '4 Sided', value: '4' },
             { label: '6 Sided', value: '6' },

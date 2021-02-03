@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, Surface } from "react-native-paper";
+import { Text } from "react-native-paper";
 import { StyleSheet, ScrollView, View } from "react-native";
 
 function padding(a, b, c, d) {
@@ -23,6 +23,9 @@ const RecentRoute = () => {
       <ScrollView>
         <View style={styles.history}>
           <Text>This is where the history gets saved...</Text>
+          <Text>Each roll of the dice will get stored here for the current session.</Text>
+          <Text>In the future, I could use a persistent storage using file storage.</Text>
+          <Text>For now I'm hoping to use a context object, but React Native seems to hate it, much like everything else I try to do.</Text>
         </View>
       </ScrollView>
     </React.Fragment>
